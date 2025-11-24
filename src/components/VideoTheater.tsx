@@ -11,8 +11,8 @@ function getRotateY(index: number): number {
 
 const VideoTheater: React.FC = () => {
   const videos = [
-    { id: 1, src: "/videos/v1.mp4", title: "Chapter I: ยัยเด็กน้อย" },
-    { id: 2, src: "/videos/v2.mp4", title: "Chapter II: Ur Smile :>" },
+    { id: 1, src: "/image/video1.mov", title: "Chapter I: ยัยเด็กน้อย" },
+    { id: 2, src: "/image/video2.mp4", title: "Chapter II: Ur Smile :>" },
   ];
 
   return (
@@ -23,7 +23,7 @@ const VideoTheater: React.FC = () => {
 
       {/* Header: ลด margin ในมือถือ */}
       <div className="text-center mb-10 md:mb-20 relative z-10 px-4">
-        <h2 className="text-3xl md:text-5xl text-[#D4AF37] font-serif italic mb-2 tracking-wide">Moving Chronicles</h2>
+        <h2 className="text-3xl md:text-5xl text-[#D4AF37] font-serif italic mb-2 tracking-wide">Your Video</h2>
         <p className="text-slate-500 text-[10px] md:text-xs uppercase tracking-[0.4em]">Evidence of Love</p>
       </div>
 
