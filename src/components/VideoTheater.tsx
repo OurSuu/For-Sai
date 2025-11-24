@@ -1,20 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+// Move getRotateY to module scope so Vercel/Next/Vite can always statically analyze it
+function getRotateY(index: number): number {
+  if (typeof window !== "undefined" && window.innerWidth < 768) {
+    return 0;
+  }
+  return index === 0 ? 25 : -25;
+}
+
 const VideoTheater: React.FC = () => {
   const videos = [
     { id: 1, src: "/videos/v1.mp4", title: "Chapter I: ยัยเด็กน้อย" },
     { id: 2, src: "/videos/v2.mp4", title: "Chapter II: Ur Smile :>" },
   ];
-
-  // Helper to detect mobile on FCLS
-  // Use window.innerWidth under effects, fallback to straight orientation if window is undefined (SSR-safe)
-  const getRotateY = (index: number) => {
-    if (typeof window !== "undefined" && window.innerWidth < 768) {
-      return 0;
-    }
-    return index === 0 ? 25 : -25;
-  };
 
   return (
     // Mobile: py-10 | Desktop: py-20
@@ -36,8 +35,7 @@ const VideoTheater: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{
               opacity: 1,
-              // Mobile: เอียงนิดเดียว (5deg) หรือไม่เอียงเลย | Desktop: เอียงสวยๆ (25deg)
-              rotateY: typeof window !== "undefined" && window.innerWidth < 768 ? 0 : (index === 0 ? 25 : -25),
+              rotateY: getRotateY(index),
               scale: 1
             }}
             whileHover={{ rotateY: 0, scale: 1.05, zIndex: 50, boxShadow: "0px 20px 50px rgba(0,0,0,0.5)" }}
