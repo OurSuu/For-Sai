@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { Star, Sparkles, Heart } from 'lucide-react';
+import { Star, Heart } from 'lucide-react';
 
 // --- Sub Components ---
 
