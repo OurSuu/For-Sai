@@ -49,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onComplete }) => {
     "ฉันตั้งใจทำมันมากเลยนะ เพื่อมาให้เธอในวันนี้",
     { 
         type: "jsx", 
-        content: <>ขอบคุณนะที่ใช้ชีวิตร่วมกันมาถึง <span className="text-[#D4AF37] text-xl md:text-4xl font-serif italic mx-1"><Counter from={0} to={400} delay={startDelay + (2 * lineDuration)} />+</span> วัน</> 
+        content: <>ขอบคุณนะที่ใช้ชีวิตร่วมกันมาถึง <span className="text-[#D4AF37] text-xl md:text-4xl font-serif italic mx-1"><Counter from={0} to={425} delay={startDelay + (2 * lineDuration)} /> </span> วัน</> 
     },
     "เธอมอบหลายๆ สิ่งให้ฉันจริงๆ อะไรที่ไม่เคยทำ... เธอพาทำหมดเลย",
     "ฉันมีความสุขมากๆ เลยล่ะ!",
