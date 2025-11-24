@@ -48,7 +48,7 @@ const MusicPlayer: React.FC = () => {
     <div className="fixed bottom-6 right-6 z-50 group">
       {/* Hidden Audio Element */}
       <audio ref={audioRef} loop preload="auto">
-        <source src="/image/Loop.mp3" type="audio/mpeg" />
+        <source src="/image/Loop2.mp3" type="audio/mpeg" />
       </audio>
 
       {/* Button */}
