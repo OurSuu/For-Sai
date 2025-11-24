@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import HeroSection from './components/HeroSection';
 import MemoryGallery from './components/MemoryGallery';
 import VideoTheater from './components/VideoTheater';
+import MusicPlayer from './components/MusicPlayer'; // Import มา
 
 function App() {
   // สร้าง State สำหรับตรวจสอบว่า Intro จบหรือยัง
@@ -10,6 +11,9 @@ function App() {
 
   return (
     <main className="w-full overflow-hidden bg-[#0B0F19] min-h-screen text-slate-200">
+      
+      {/* ใส่ตรงนี้เลย จะได้ลอยอยู่ตลอดทุกหน้า */}
+      <MusicPlayer />
 
       {/* ส่งฟังก์ชันไปให้ HeroSection เรียกเมื่อข้อความเล่นจบ */}
       <HeroSection onComplete={() => setIsIntroFinished(true)} />
