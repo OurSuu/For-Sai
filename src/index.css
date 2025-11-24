@@ -1,0 +1,15 @@
+/* src/index.css */
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.perspective-container {
+  perspective: 2000px; /* เพิ่มความลึกของ 3D */
+}
+
+.backface-visible {
+  backface-visibility: visible;
+}
