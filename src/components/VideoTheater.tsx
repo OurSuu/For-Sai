@@ -7,7 +7,14 @@ const VideoTheater: React.FC = () => {
     { id: 2, src: "/videos/v2.mp4", title: "Chapter II: Ur Smile :>" },
   ];
 
-  // Removed unused getRotateY function (vercel bug fix)
+  // Helper to detect mobile on FCLS
+  // Use window.innerWidth under effects, fallback to straight orientation if window is undefined (SSR-safe)
+  const getRotateY = (index: number) => {
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      return 0;
+    }
+    return index === 0 ? 25 : -25;
+  };
 
   return (
     // Mobile: py-10 | Desktop: py-20
